@@ -11434,3 +11434,7 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
 @media (min-width: 768px) {
   .navbar {
     border-radius: 0px; } }
+.btn-xs, .btn-group-xs > .btn {
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px; }

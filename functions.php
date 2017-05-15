@@ -22,3 +22,15 @@ function wps_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'wps_scripts' );
+
+if (function_exists('register_sidebar')) {
+    register_sidebar( array(
+        'name' => __( 'Sidebar News Widget', 'news' ),
+        'id' => 'sidebar-news-widget-area',
+        'description' => __( 'Sidebar news widget area', 'news' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+) );
+}

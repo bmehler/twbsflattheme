@@ -1,5 +1,6 @@
 <article <?php post_class(); ?>>
-    <h3>Statische Seite: <?php the_title(); ?></h3>
+    <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
 </article>
+
 

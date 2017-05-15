@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-primary">
     <div class="panel-heading">
         <article <?php post_class(); ?>>
         <h3 class="panel-title">
@@ -14,4 +14,3 @@
         <?php the_content() ?>
     </div>
 </div>
-     

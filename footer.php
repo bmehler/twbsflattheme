@@ -1,6 +1,8 @@
         <footer>
-            <p>Copyright 2010 - <?php echo date('Y'); ?> - <?php bloginfo('name'); ?></p>
+            <hr>
+           <p>&copy; 2016 - <?php echo date('Y'); echo " "; echo bloginfo('name'); ?></p>
         </footer>
-        <?php //wp_footer(); ?>
+        <?php wp_footer(); ?>
+        </div>
     </body> 
 </html>
