@@ -11,6 +11,7 @@
             <?php get_template_part('template_parts/content', 'error'); ?>
     
             <?php endif; ?>
+            <a href="<?php echo get_site_url(); ?>" class="btn btn-warning btn-md pull-right">Zurück</a>
         </div>
     </div>
 <?php get_footer(); ?>
