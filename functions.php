@@ -19,6 +19,9 @@ function wps_scripts() {
             '3.3.7',
             null
         );
+    
+    wp_enqueue_style(
+        'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome/css/font-awesome.min.css'); 
 }
 
 add_action( 'wp_enqueue_scripts', 'wps_scripts' );

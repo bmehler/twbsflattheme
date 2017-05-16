@@ -19,9 +19,9 @@
                 <h1>
                     <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
                 </h1>
-                <button href="#" class="btn btn-primary btn-md">Wordpress</button> 
-                <button href="#" class="btn btn-success btn-md">Bootstrap Flatly</button> 
-                <button href="#" class="btn btn-warning btn-md">Reponsive Webdesign</button>
+                <button href="#" class="btn btn-primary btn-md"><i class="fa fa-wordpress" aria-hidden="true"></i> Wordpress</button> 
+                <button href="#" class="btn btn-success btn-md"><i class="fa fa-pencil" aria-hidden="true"></i> Bootstrap Flatly</button> 
+                <button href="#" class="btn btn-warning btn-md"><i class="fa fa-desktop" aria-hidden="true"></i> Reponsive Webdesign</button>
                 <h3>
                     <?php bloginfo( 'description' ); ?>
                 </h3>
