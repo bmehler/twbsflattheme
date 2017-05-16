@@ -35,4 +35,16 @@ if (function_exists('register_sidebar')) {
 ) );
 }
 
+if (function_exists('register_sidebar')) {
+    register_sidebar( array(
+        'name' => __( 'Sidebar Post Widget', 'post' ),
+        'id' => 'sidebar-post-widget-area',
+        'description' => __( 'Sidebar post widget area', 'post' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+) );
+}
+
 add_theme_support( 'post-thumbnails' ); 
