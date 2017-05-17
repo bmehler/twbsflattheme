@@ -1,3 +1,11 @@
+<?php if( is_page() ) { ?>
+<div class="well">
+    <aside>
+    <?php get_search_form(); ?>
+    </aside>
+</div>
+ <?php } ?>
+
 <div class="well">
     <aside>
         <?php if( is_page() ) { ?>

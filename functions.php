@@ -91,3 +91,11 @@ function mytheme_customize_css() {
 if ( is_page_template( 'page-templates/full-width.php' ) ) {
     include_once 'page-templates/full-width.php.php';
 }
+
+function rrze_search_filter( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array('post','page') );
+    }
+    return $query;
+}
+add_filter('pre_get_posts','rrze_search_filter');
