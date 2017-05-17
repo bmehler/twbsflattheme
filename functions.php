@@ -50,4 +50,44 @@ if (function_exists('register_sidebar')) {
 ) );
 }
 
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'custom-background' );
+
+add_action('customize_register','mytheme_customizer_options');
+
+function mytheme_customizer_options( $wp_customize ) {
+    $wp_customize->add_setting(
+        'twbsflattheme_header_background_color', //give it an ID
+        array(
+        'default' => '#ecf0f1', // Give it a default
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'mytheme_custom_accent_color', //give it an ID
+            array(
+               'label' => __( 'Header Background Color', 'twbsflattheme' ), //set the label to appear in the Customizer
+               'section' => 'colors', //select the section for it to appear under 
+               'settings' => 'twbsflattheme_header_background_color' //pick the setting it applies to
+           )
+        )
+    );
+}
+
+add_action( 'wp_head', 'mytheme_customize_css' );
+/*
+ * Output our custom Accent Color setting CSS Style
+ *
+ */
+function mytheme_customize_css() {
+ ?>
+ <style type="text/css">
+ .jumbotron { background-color:<?php echo get_theme_mod( 'twbsflattheme_header_background_color', '#ecf0f1' ); // add in your add_settings ID and default value ?>; }
+ </style>
+ <?php
+}
+
+if ( is_page_template( 'page-templates/full-width.php' ) ) {
+    include_once 'page-templates/full-width.php.php';
+}
